@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="page">
+
+    <div id="ders"><p id="dersText">{{ders_adi}}</p></div>
+
+
+    <div id="name"><p id="nameText">Ad Soyad: </p>
+        <div id="nameBox"></div>
+    </div>
+    <div id="questions-area">
+        {%- for question in questions %}
+
+        <div class="question-area">
+
+            <div class="question">
+                {{question["Q"]}}
+            </div>
+
+            <div class="answers">
+                <div class="answer">
+                    <div class="mark">A)</div>
+                    <div>{{question["A1"]}}</div>
+                </div>
+                <div class="answer">
+                    <div class="mark">B)</div>
+                    <div>{{question["A2"]}}</div>
+                </div>
+                <div class="answer">
+                    <div class="mark">C)</div>
+                    <div>{{question["A3"]}}</div>
+                </div>
+                <div class="answer">
+                    <div class="mark">D)</div>
+                    <div>{{question["A4"]}}</div>
+                </div>
+            </div>
+
+        </div>
+
+        {% endfor %}
+    </div>
+</div>
+
+
+</body>
+</html>
